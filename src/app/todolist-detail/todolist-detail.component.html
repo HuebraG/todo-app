@@ -1,0 +1,14 @@
+<ul *ngIf="list">
+  <li *ngFor="let todo of list.list"
+      [class.tododone]="todo.isDone == true">
+    <div *ngIf="!todo.isDone">
+      <input class="todoname" [(ngModel)]='todo.name'>
+      <input class="tododescription" [(ngModel)]='todo.description'>
+      <button type="button" (click)="finishToDo(todo)">Check</button>
+    </div>
+    <div *ngIf="todo.isDone">
+      <label>{{todo.name}}</label> <label>{{todo.description}}</label>
+    </div>
+    <button type="button" (click)="deleteToDo(todo)">Supprimer la tâche</button>
+  </li>
+</ul>

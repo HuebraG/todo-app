@@ -1,0 +1,14 @@
+<ul *ngIf="listOfLists">
+  <li *ngFor="let list of listOfLists"
+      (click)="selectList(list)"
+      [class.allDone]="allToDoAreChecked(list)"
+      >
+    {{list.name}}
+
+    {{list.description}}
+    <button type="button" (click)="deleteList(list)">Supprimer</button>
+  </li>
+
+</ul>
+<app-todolist-detail [list]="selectedList"></app-todolist-detail>
+
