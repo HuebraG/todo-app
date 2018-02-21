@@ -1,3 +1,31 @@
 .allDone {
-  color : red;
+  color : grey;
+}
+
+.allDone label.description::after{
+  content: "- terminée";
+}
+
+.isSelected div{
+  background-color : darkgrey;
+}
+
+li {
+  display:flex;
+  justify-content:center;
+}
+
+li div {
+  border: 1px groove steelblue;
+  padding : 0em;
+  border-radius:0.1em;
+  width:60%;
+  margin : 0.2em;
+}
+
+
+
+fieldset{
+  width:95%;
+
 }

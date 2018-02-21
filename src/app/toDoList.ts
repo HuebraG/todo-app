@@ -16,6 +16,9 @@ export class ToDoList {
     if (index > -1) {
       this.list.splice(index, 1);
     }
+  }
 
+  public addToDo(): void {
+    this.list.push({ name: "nouvelle tache", description: "description", isDone: false });
   }
 }

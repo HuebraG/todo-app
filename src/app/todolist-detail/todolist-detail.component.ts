@@ -19,6 +19,10 @@ export class TodolistDetailComponent implements OnInit {
     this.list.deleteToDo(todo);
   }
 
+  addToDo() : void {
+    this.list.addToDo();
+  }
+
   constructor() { }
 
   ngOnInit() {

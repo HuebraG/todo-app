@@ -2,13 +2,23 @@
   <li *ngFor="let list of listOfLists"
       (click)="selectList(list)"
       [class.allDone]="allToDoAreChecked(list)"
+      [class.isSelected]="selectedList===list"
       >
-    {{list.name}}
+    <div>
+      <label class="name">
+        {{list.name}} :
+      </label>
+      <label class="description">
+        {{list.description}}
+      </label>
+    </div>
 
-    {{list.description}}
     <button type="button" (click)="deleteList(list)">Supprimer</button>
   </li>
 
 </ul>
-<app-todolist-detail [list]="selectedList"></app-todolist-detail>
+<fieldset *ngIf="selectedList">
+  <legend>{{selectedList.name}}</legend>
+  <app-todolist-detail [list]="selectedList"></app-todolist-detail>
+</fieldset>
 

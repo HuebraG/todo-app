@@ -18,6 +18,7 @@ export class TodolistViewComponent implements OnInit {
 
   deleteList(list: ToDoList): void {
     this.addListService.deleteList(list);
+    this.selectedList = null;
   }
 
   addList(list: ToDoList) {

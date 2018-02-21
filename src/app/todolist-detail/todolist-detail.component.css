@@ -1,3 +1,19 @@
-li.tododone {
+
+
+li.tododone *:not(button) {
   text-decoration: line-through;
+}
+
+li {
+  display:flex;
+  justify-content:space-between;
+}
+li div {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+li div * {
+  margin : 0.1em;
 }
