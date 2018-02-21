@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { TodolistViewComponent } from './todolist-view/todolist-view.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodolistViewComponent
   ],
   imports: [
     BrowserModule
